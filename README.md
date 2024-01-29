@@ -1,3 +1,5 @@
+# Chrome Extension
+
 ## About 
 
 Salesforce Case Email Printable View has a lot of unnecessary clutter and dumps everything in the same font size, weight and color, making it hard to extract necessary information.

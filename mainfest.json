@@ -19,7 +19,7 @@
 		}
 	],
 	"permissions": [
-		"storage", "scripting", "tabs", "activeTab"
+		"storage", "scripting", "activeTab"
 	],
 	"host_permissions": [
 		"{{INSERT URL}}"

@@ -1,0 +1,27 @@
+{
+	"manifest_version": 3,
+	"name": "Weberml's Case Printable View Declutterer",
+	"description": "Gets rid of unnecessary clutter of the printable view of a Salesforce Email Case.",
+	"version": "1.0",
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": "128.png"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+		  "js": ["content-script.js"],
+		  "matches": [
+			"{{INSERT URL}}"
+		  ]
+		}
+	],
+	"permissions": [
+		"storage", "scripting", "tabs", "activeTab"
+	],
+	"host_permissions": [
+		"{{INSERT URL}}"
+	]	
+}

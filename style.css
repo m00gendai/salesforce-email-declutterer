@@ -1,0 +1,103 @@
+/* Removes Header image */
+.printHeader img{
+	display: none;
+}
+
+/* Makes Header container flex */
+.printHeader{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0!important;
+	height: 0!important;
+}
+
+/* Positioning of Print Controls */
+.printControls{
+	float: none;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+/* Removes bullet points */
+.printControls ul{
+	list-style: none;
+	padding: 0;
+}
+
+/* Hide "close window" control */
+.printControls li:first-child{
+	display: none;
+}
+
+/* Styles "print this page" control as a button */
+.printControls li{
+	margin-left: 0;
+	background: blue;
+	color: white;
+	border-radius: 5px;
+	height: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 5px -2px black;
+	transition: 0.25s;
+}
+
+/* Hover effect of "button" */
+.printControls li:hover{
+	box-shadow: 0px 0px 5px 0px black;
+}
+
+/* Link styling of "button" */
+.printControls li a{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+/* Link hover styling of "button" */
+.printControls li a:hover{
+	color: white;
+	text-decoration:none;
+}
+
+/* Styling for Case Number */
+body > div > div.bHeader{
+	color: red;
+	margin: 1rem 0;
+	font-size: 1rem;
+}
+
+/* Hides detail table */
+#mainTable{
+	display:none;
+}
+
+/* Hide detail table that sometimes comes without an id */
+body table:nth-child(4){
+	display: none;
+}
+
+/* Highlights Case Subjeczt */
+.emailMessageBlock .pbHeader{
+	color: blue!important;
+}
+
+/* Highlights Email Body */
+.emailMessageBlock .pbBody .list tbody tr:last-child td{
+	color: blue!important;
+	font-weight: normal!important;
+}
+
+/* Font weight for Email Field tags */
+.noStandardTab .pbBody .list tbody tr td{
+	font-weight: normal!important;
+}

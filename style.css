@@ -1,10 +1,15 @@
+/* The print view is wrapped in the .print class,
+therefore all selectors are prefixed with the .print class, 
+as otherwise, tables and elements outside the print view
+are targeted, too. */
+
 /* Removes Header image */
-.printHeader img{
+.print .printHeader img{
 	display: none;
 }
 
 /* Makes Header container flex */
-.printHeader{
+.print .printHeader{
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -13,7 +18,7 @@
 }
 
 /* Positioning of Print Controls */
-.printControls{
+.print .printControls{
 	float: none;
 	position: absolute;
 	top: 1rem;
@@ -21,18 +26,18 @@
 }
 
 /* Removes bullet points */
-.printControls ul{
+.print .printControls ul{
 	list-style: none;
 	padding: 0;
 }
 
 /* Hide "close window" control */
-.printControls li:first-child{
+.print .printControls li:first-child{
 	display: none;
 }
 
 /* Styles "print this page" control as a button */
-.printControls li{
+.print .printControls li{
 	margin-left: 0;
 	background: blue;
 	color: white;
@@ -46,12 +51,12 @@
 }
 
 /* Hover effect of "button" */
-.printControls li:hover{
+.print .printControls li:hover{
 	box-shadow: 0px 0px 5px 0px black;
 }
 
 /* Link styling of "button" */
-.printControls li a{
+.print .printControls li a{
 	position: relative;
 	height: 100%;
 	width: 100%;
@@ -64,40 +69,65 @@
 }
 
 /* Link hover styling of "button" */
-.printControls li a:hover{
+.print .printControls li a:hover{
 	color: white;
 	text-decoration:none;
 }
 
 /* Styling for Case Number */
-body > div > div.bHeader{
+.print .bHeader {
 	color: red;
-	margin: 1rem 0;
-	font-size: 1rem;
+	margin: 1rem 0!important;
+	font-size: 1.5rem!important;
+}
+
+/* Hides Case type title and Chatter title*/
+.print .bHeader h2{
+	display: none;
+}
+
+/* Hides Text Posts title */
+.print .pbHeader h3{
+	display: none;
+}
+
+/* The Email Subject title is also a .pbHeader h3, so
+the first of the .print .pbHeader must be displayed again */
+.print .pbHeader:first-child h3{
+	display: block;
 }
 
 /* Hides detail table */
-#mainTable{
+.print #mainTable{
 	display:none;
 }
 
 /* Hide detail table that sometimes comes without an id */
-body table:nth-child(4){
+.print table:nth-child(4){
 	display: none;
 }
 
 /* Highlights Case Subjeczt */
-.emailMessageBlock .pbHeader{
+.print .emailMessageBlock .pbHeader{
 	color: blue!important;
 }
 
 /* Highlights Email Body */
-.emailMessageBlock .pbBody .list tbody tr:last-child td{
+.print .emailMessageBlock .pbBody .list tbody tr:last-child td{
 	color: blue!important;
 	font-weight: normal!important;
 }
 
 /* Font weight for Email Field tags */
-.noStandardTab .pbBody .list tbody tr td{
+.print .noStandardTab .pbBody .list tbody tr td{
 	font-weight: normal!important;
 }
+
+/* Hides case history */
+.print .noStandardTab{
+	display: none;
+}
+
+/* Also hides case history... */
+.print .efpvEntityFeed{
+	display: none;

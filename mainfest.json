@@ -1,8 +1,14 @@
 {
 	"manifest_version": 3,
 	"name": "Weberml's Case Printable View Declutterer",
+	"author": "Marcel Weber",
+	"homepage_url": "https://https://github.com/m00gendai",
+	"developer": {
+		"name": "Marcel Weber",
+		"url": "https://https://github.com/m00gendai"
+	},
 	"description": "Gets rid of unnecessary clutter of the printable view of a Salesforce Email Case.",
-	"version": "1.0",
+	"version": "1.1",
 	"action": {
 		"default_popup": "popup.html",
 		"default_icon": "128.png"
@@ -14,7 +20,7 @@
 		{
 		  "js": ["content-script.js"],
 		  "matches": [
-			"{{INSERT URL}}"
+			"https://aimconnect.my.salesforce.com/*"
 		  ]
 		}
 	],
@@ -22,6 +28,6 @@
 		"storage", "scripting", "activeTab"
 	],
 	"host_permissions": [
-		"{{INSERT URL}}"
+		"https://aimconnect.my.salesforce.com/*"
 	]	
 }
